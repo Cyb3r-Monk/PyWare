@@ -22,21 +22,9 @@ else:
 	make_keys
 
 #Uncomment this if you don't want to hardcode your RSA public key
-#with open("master_public.pem", "r") as keyfile:
-	#master_public = keyfile.read()
-	#keyfile.close()
-
-#Enter your public key if you change it
-
-master_public = """-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyetzab8VcbLKoHyJ0WAM
-gyOTQlMFUa8yK8vd/W/LL8jsz5CCvk1tGJ5W4VA54TSH25JrFq3RFz1FJkRze8Un
-WjgPaDdo3S8y3Eca+OVhUdkuX2IeyXYV9PGAy3ADXtZBGldjF7M+u/71LhxnEoFl
-8eteTwqCotw9iIsUQGhOz4CTKdQ2HrqfcHzzm+5jibrldD0cRFsMaeBrhoK8QyJX
-K6TtJY2MBw84BfbSFoRG6PbSd/r5vrI0NXCchpMdvmN490OEzJpwe5kGnK+g/l97
-HiRZxthuOvrXXnDUQii5yJ3O4abjmZDj6gwdlmf9Fg+63Y4pDBIb5fb+Ib8M8prI
-GQIDAQAB
------END PUBLIC KEY-----"""
+with open("master_public.pem", "r") as keyfile:
+	master_public = keyfile.read()
+	keyfile.close()
 
 pub_key = RSA.importKey(master_public)
 
